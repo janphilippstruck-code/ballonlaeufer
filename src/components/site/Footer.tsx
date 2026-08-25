@@ -8,12 +8,14 @@ export function Footer() {
       <div className="container-bl py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
-            <img
-              src={img.logoFullTransparent}
-              alt="Ballonläufer"
-              className="h-14 w-auto"
-              loading="lazy"
-            />
+            <span className="inline-flex rounded-lg bg-background px-4 py-3">
+              <img
+                src={img.logoFullTransparent}
+                alt="Ballonläufer"
+                className="h-11 w-auto"
+                loading="lazy"
+              />
+            </span>
             <p className="mt-5 text-lg font-bold">{site.claim}</p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-muted">
               Zeitmessung, Moderation und Unterstützung für Laufveranstaltungen.
