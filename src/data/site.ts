@@ -12,7 +12,7 @@ export const site = {
   mailtoBallonUltra:
     "mailto:janphilippstruck@gmx.de?subject=Frage%20zum%20Ballon-Ultralauf",
   externalBorneToRun: "https://www.borne-run.de/",
-  externalUltraVerfolgt: "https://ultraverfolgt.xn--ballonlufer-jcb.de/",
+  externalUltraVerfolgt: "https://ultraverfolgt.xn--ballonlufer-r8a.de/",
 } as const;
 
 /** Zentral editierbar: geplanter Termin Hammer Backyard Ultra. */
