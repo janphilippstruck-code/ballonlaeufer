@@ -28,7 +28,8 @@ function KontaktPage() {
   return (
     <>
       <section className="border-b border-border">
-        <div className="container-bl max-w-3xl py-16 md:py-24">
+        <div className="container-bl py-16 md:py-24">
+        <div className="max-w-3xl">
           <Label>Kontakt</Label>
           <h1 className="mt-5 text-4xl leading-tight md:text-5xl">
             Lass uns über deinen Lauf sprechen.

@@ -37,7 +37,8 @@ function ProjektePage() {
   return (
     <>
       <section className="border-b border-border">
-        <div className="container-bl max-w-3xl py-14 md:py-20">
+        <div className="container-bl py-14 md:py-20">
+        <div className="max-w-3xl">
           <Label>Projekte</Label>
           <h1 className="mt-5 text-4xl leading-tight md:text-5xl lg:text-[3.4rem]">
             Was gerade entsteht.

@@ -25,7 +25,8 @@ export const Route = createFileRoute("/datenschutz")({
 
 function DatenschutzPage() {
   return (
-    <div className="container-bl max-w-3xl py-16 md:py-24">
+    <div className="container-bl py-16 md:py-24">
+        <div className="max-w-3xl">
       <Label>Rechtliches</Label>
       <h1 className="mt-5 text-4xl md:text-5xl">Datenschutz</h1>
       <span className="rule-bl mt-6" aria-hidden="true" />
