@@ -15,7 +15,9 @@ import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
 import { Route as ReferenzenRouteImport } from './routes/referenzen'
+import { Route as UeberMichRouteImport } from './routes/ueber-mich'
 import { Route as VeranstaltungenRouteImport } from './routes/veranstaltungen'
+import { Route as ProjekteIndexRouteImport } from './routes/projekte/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -47,9 +49,19 @@ const ReferenzenRoute = ReferenzenRouteImport.update({
   path: '/referenzen',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UeberMichRoute = UeberMichRouteImport.update({
+  id: '/ueber-mich',
+  path: '/ueber-mich',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VeranstaltungenRoute = VeranstaltungenRouteImport.update({
   id: '/veranstaltungen',
   path: '/veranstaltungen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjekteIndexRoute = ProjekteIndexRouteImport.update({
+  id: '/projekte/',
+  path: '/projekte/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -60,7 +72,9 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
+  '/ueber-mich': typeof UeberMichRoute
   '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/': typeof ProjekteIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -69,7 +83,9 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
+  '/ueber-mich': typeof UeberMichRoute
   '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte': typeof ProjekteIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -79,7 +95,9 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
+  '/ueber-mich': typeof UeberMichRoute
   '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/': typeof ProjekteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -90,7 +108,9 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/leistungen'
     | '/referenzen'
+    | '/ueber-mich'
     | '/veranstaltungen'
+    | '/projekte/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -99,7 +119,9 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/leistungen'
     | '/referenzen'
+    | '/ueber-mich'
     | '/veranstaltungen'
+    | '/projekte'
   id:
     | '__root__'
     | '/'
@@ -108,7 +130,9 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/leistungen'
     | '/referenzen'
+    | '/ueber-mich'
     | '/veranstaltungen'
+    | '/projekte/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -118,7 +142,9 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   LeistungenRoute: typeof LeistungenRoute
   ReferenzenRoute: typeof ReferenzenRoute
+  UeberMichRoute: typeof UeberMichRoute
   VeranstaltungenRoute: typeof VeranstaltungenRoute
+  ProjekteIndexRoute: typeof ProjekteIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -165,11 +191,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReferenzenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ueber-mich': {
+      id: '/ueber-mich'
+      path: '/ueber-mich'
+      fullPath: '/ueber-mich'
+      preLoaderRoute: typeof UeberMichRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/veranstaltungen': {
       id: '/veranstaltungen'
       path: '/veranstaltungen'
       fullPath: '/veranstaltungen'
       preLoaderRoute: typeof VeranstaltungenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projekte/': {
+      id: '/projekte/'
+      path: '/projekte'
+      fullPath: '/projekte/'
+      preLoaderRoute: typeof ProjekteIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -182,7 +222,9 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   LeistungenRoute: LeistungenRoute,
   ReferenzenRoute: ReferenzenRoute,
+  UeberMichRoute: UeberMichRoute,
   VeranstaltungenRoute: VeranstaltungenRoute,
+  ProjekteIndexRoute: ProjekteIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
