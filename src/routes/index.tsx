@@ -407,7 +407,7 @@ function StartPage() {
                     </a>
                   ) : (
                     <Link
-                      to={p.href}
+                      to={p.href as never}
                       className="text-sm font-semibold text-brand"
                     >
                       {p.linkLabel}

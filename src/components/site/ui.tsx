@@ -25,12 +25,12 @@ export function ActionLink({
   className,
   children,
 }: {
-  href?: string;
-  to?: string;
-  hash?: string;
-  variant?: Variant;
-  external?: boolean;
-  className?: string;
+  href?: string | undefined;
+  to?: string | undefined;
+  hash?: string | undefined;
+  variant?: Variant | undefined;
+  external?: boolean | undefined;
+  className?: string | undefined;
   children: ReactNode;
 }) {
   const cls = cn(btnBase, btnVariants[variant], className);
@@ -58,9 +58,9 @@ export function Section({
   className,
   children,
 }: {
-  tone?: "light" | "surface" | "ink" | "brand";
-  id?: string;
-  className?: string;
+  tone?: "light" | "surface" | "ink" | "brand" | undefined;
+  id?: string | undefined;
+  className?: string | undefined;
   children: ReactNode;
 }) {
   const tones = {
@@ -90,11 +90,11 @@ export function SectionHead({
   align = "left",
   invert = false,
 }: {
-  label?: string;
+  label?: string | undefined;
   title: ReactNode;
   intro?: ReactNode;
-  align?: "left" | "center";
-  invert?: boolean;
+  align?: "left" | "center" | undefined;
+  invert?: boolean | undefined;
 }) {
   return (
     <div
@@ -137,10 +137,10 @@ export function Figure({
 }: {
   src: string;
   alt: string;
-  className?: string;
-  imgClassName?: string;
-  position?: string;
-  priority?: boolean;
+  className?: string | undefined;
+  imgClassName?: string | undefined;
+  position?: string | undefined;
+  priority?: boolean | undefined;
 }) {
   return (
     <figure className={cn("overflow-hidden rounded-xl bg-surface", className)}>
