@@ -72,7 +72,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="fixed inset-x-0 bottom-0 top-[72px] z-40 overflow-y-auto border-t border-border bg-background lg:hidden">
+        <div className="absolute inset-x-0 top-full z-40 max-h-[calc(100dvh-72px)] overflow-y-auto border-t border-border bg-background lg:hidden">
           <nav aria-label="Mobile Navigation" className="container-bl py-6">
             <ul className="divide-y divide-border">
               {nav.map((item) => (
