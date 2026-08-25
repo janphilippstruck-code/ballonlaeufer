@@ -18,6 +18,8 @@ import { Route as ReferenzenRouteImport } from './routes/referenzen'
 import { Route as UeberMichRouteImport } from './routes/ueber-mich'
 import { Route as VeranstaltungenRouteImport } from './routes/veranstaltungen'
 import { Route as ProjekteIndexRouteImport } from './routes/projekte/index'
+import { Route as ProjekteBallonUltralaufRouteImport } from './routes/projekte/ballon-ultralauf'
+import { Route as ProjekteHammerBackyardUltraRouteImport } from './routes/projekte/hammer-backyard-ultra'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +66,17 @@ const ProjekteIndexRoute = ProjekteIndexRouteImport.update({
   path: '/projekte/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjekteBallonUltralaufRoute = ProjekteBallonUltralaufRouteImport.update({
+  id: '/projekte/ballon-ultralauf',
+  path: '/projekte/ballon-ultralauf',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjekteHammerBackyardUltraRoute =
+  ProjekteHammerBackyardUltraRouteImport.update({
+    id: '/projekte/hammer-backyard-ultra',
+    path: '/projekte/hammer-backyard-ultra',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -74,6 +87,8 @@ export interface FileRoutesByFullPath {
   '/referenzen': typeof ReferenzenRoute
   '/ueber-mich': typeof UeberMichRoute
   '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/ballon-ultralauf': typeof ProjekteBallonUltralaufRoute
+  '/projekte/hammer-backyard-ultra': typeof ProjekteHammerBackyardUltraRoute
   '/projekte/': typeof ProjekteIndexRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +100,8 @@ export interface FileRoutesByTo {
   '/referenzen': typeof ReferenzenRoute
   '/ueber-mich': typeof UeberMichRoute
   '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/ballon-ultralauf': typeof ProjekteBallonUltralaufRoute
+  '/projekte/hammer-backyard-ultra': typeof ProjekteHammerBackyardUltraRoute
   '/projekte': typeof ProjekteIndexRoute
 }
 export interface FileRoutesById {
@@ -97,6 +114,8 @@ export interface FileRoutesById {
   '/referenzen': typeof ReferenzenRoute
   '/ueber-mich': typeof UeberMichRoute
   '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/ballon-ultralauf': typeof ProjekteBallonUltralaufRoute
+  '/projekte/hammer-backyard-ultra': typeof ProjekteHammerBackyardUltraRoute
   '/projekte/': typeof ProjekteIndexRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +129,8 @@ export interface FileRouteTypes {
     | '/referenzen'
     | '/ueber-mich'
     | '/veranstaltungen'
+    | '/projekte/ballon-ultralauf'
+    | '/projekte/hammer-backyard-ultra'
     | '/projekte/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +142,8 @@ export interface FileRouteTypes {
     | '/referenzen'
     | '/ueber-mich'
     | '/veranstaltungen'
+    | '/projekte/ballon-ultralauf'
+    | '/projekte/hammer-backyard-ultra'
     | '/projekte'
   id:
     | '__root__'
@@ -132,6 +155,8 @@ export interface FileRouteTypes {
     | '/referenzen'
     | '/ueber-mich'
     | '/veranstaltungen'
+    | '/projekte/ballon-ultralauf'
+    | '/projekte/hammer-backyard-ultra'
     | '/projekte/'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +169,8 @@ export interface RootRouteChildren {
   ReferenzenRoute: typeof ReferenzenRoute
   UeberMichRoute: typeof UeberMichRoute
   VeranstaltungenRoute: typeof VeranstaltungenRoute
+  ProjekteBallonUltralaufRoute: typeof ProjekteBallonUltralaufRoute
+  ProjekteHammerBackyardUltraRoute: typeof ProjekteHammerBackyardUltraRoute
   ProjekteIndexRoute: typeof ProjekteIndexRoute
 }
 
@@ -212,6 +239,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjekteIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projekte/ballon-ultralauf': {
+      id: '/projekte/ballon-ultralauf'
+      path: '/projekte/ballon-ultralauf'
+      fullPath: '/projekte/ballon-ultralauf'
+      preLoaderRoute: typeof ProjekteBallonUltralaufRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projekte/hammer-backyard-ultra': {
+      id: '/projekte/hammer-backyard-ultra'
+      path: '/projekte/hammer-backyard-ultra'
+      fullPath: '/projekte/hammer-backyard-ultra'
+      preLoaderRoute: typeof ProjekteHammerBackyardUltraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -224,6 +265,8 @@ const rootRouteChildren: RootRouteChildren = {
   ReferenzenRoute: ReferenzenRoute,
   UeberMichRoute: UeberMichRoute,
   VeranstaltungenRoute: VeranstaltungenRoute,
+  ProjekteBallonUltralaufRoute: ProjekteBallonUltralaufRoute,
+  ProjekteHammerBackyardUltraRoute: ProjekteHammerBackyardUltraRoute,
   ProjekteIndexRoute: ProjekteIndexRoute,
 }
 export const routeTree = rootRouteImport
