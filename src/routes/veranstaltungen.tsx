@@ -57,7 +57,7 @@ function VeranstaltungenPage() {
           </div>
           <Figure
             src={img.histSevenInHeaven}
-            alt="Startaufstellung beim Ballon-Ultralauf 2019"
+            alt="Läuferinnen und Läufer bei einer eigenen Ballonläufer-Veranstaltung"
             className="aspect-[4/3]"
             priority
           />
