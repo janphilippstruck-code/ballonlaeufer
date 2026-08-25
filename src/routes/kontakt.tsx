@@ -29,28 +29,28 @@ function KontaktPage() {
     <>
       <section className="border-b border-border">
         <div className="container-bl py-16 md:py-24">
-        <div className="max-w-3xl">
-          <Label>Kontakt</Label>
-          <h1 className="mt-5 text-4xl leading-tight md:text-5xl">
-            Lass uns über deinen Lauf sprechen.
-          </h1>
-          <span className="rule-bl mt-6" aria-hidden="true" />
-          <p className="prose-bl mt-6">
-            Du planst eine Laufveranstaltung und suchst Unterstützung bei
-            Zeitmessung, Moderation, Technik oder Organisation? Schreib mir einfach
-            kurz, was du vorhast.
-          </p>
+          <div className="max-w-3xl">
+            <Label>Kontakt</Label>
+            <h1 className="mt-5 text-4xl leading-tight md:text-5xl">
+              Lass uns über deinen Lauf sprechen.
+            </h1>
+            <span className="rule-bl mt-6" aria-hidden="true" />
+            <p className="prose-bl mt-6">
+              Du planst eine Laufveranstaltung und suchst Unterstützung bei Zeitmessung, Moderation,
+              Technik oder Organisation? Schreib mir einfach kurz, was du vorhast.
+            </p>
 
-          <div className="mt-10 rounded-xl border border-border bg-surface p-7 md:p-9">
-            <p className="text-2xl font-extrabold md:text-3xl">{site.owner}</p>
-            <a
-              href={site.mailtoAnfrage}
-              className="mt-2 block text-xl font-semibold text-brand break-words md:text-2xl"
-            >
-              {site.email}
-            </a>
-            <div className="mt-7">
-              <ActionLink href={site.mailtoAnfrage}>E-Mail schreiben</ActionLink>
+            <div className="mt-10 rounded-xl border border-border bg-surface p-7 md:p-9">
+              <p className="text-2xl font-extrabold md:text-3xl">{site.owner}</p>
+              <a
+                href={site.mailtoAnfrage}
+                className="mt-2 block text-xl font-semibold text-brand break-words md:text-2xl"
+              >
+                {site.email}
+              </a>
+              <div className="mt-7">
+                <ActionLink href={site.mailtoAnfrage}>E-Mail schreiben</ActionLink>
+              </div>
             </div>
           </div>
         </div>
@@ -80,8 +80,8 @@ function KontaktPage() {
             ))}
           </ul>
           <p className="prose-bl mt-8">
-            Du musst noch nicht jedes Detail kennen. Auch wenn deine Veranstaltung
-            erst eine Idee ist, können wir darüber sprechen.
+            Du musst noch nicht jedes Detail kennen. Auch wenn deine Veranstaltung erst eine Idee
+            ist, können wir darüber sprechen.
           </p>
         </div>
       </Section>

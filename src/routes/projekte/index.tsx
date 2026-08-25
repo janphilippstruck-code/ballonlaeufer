@@ -23,8 +23,7 @@ export const Route = createFileRoute("/projekte/")({
       { property: "og:title", content: "Projekte | Ballonläufer" },
       {
         property: "og:description",
-        content:
-          "Neue Laufideen, ungewöhnliche Formate und Projekte, die gerade entstehen.",
+        content: "Neue Laufideen, ungewöhnliche Formate und Projekte, die gerade entstehen.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -38,20 +37,21 @@ function ProjektePage() {
     <>
       <section className="border-b border-border">
         <div className="container-bl py-14 md:py-20">
-        <div className="max-w-3xl">
-          <Label>Projekte</Label>
-          <h1 className="mt-5 text-4xl leading-tight md:text-5xl lg:text-[3.4rem]">
-            Was gerade entsteht.
-          </h1>
-          <span className="rule-bl mt-6" aria-hidden="true" />
-          <p className="prose-bl mt-6">
-            Neue Laufideen, ungewöhnliche Formate und Projekte, bei denen ich einfach
-            ausprobieren möchte, was möglich ist.
-          </p>
-          <p className="prose-bl mt-4">
-            Nicht jede Idee wird sofort eine klassische Laufveranstaltung – und genau
-            das macht diesen Bereich spannend.
-          </p>
+          <div className="max-w-3xl">
+            <Label>Projekte</Label>
+            <h1 className="mt-5 text-4xl leading-tight md:text-5xl lg:text-[3.4rem]">
+              Was gerade entsteht.
+            </h1>
+            <span className="rule-bl mt-6" aria-hidden="true" />
+            <p className="prose-bl mt-6">
+              Neue Laufideen, ungewöhnliche Formate und Projekte, bei denen ich einfach ausprobieren
+              möchte, was möglich ist.
+            </p>
+            <p className="prose-bl mt-4">
+              Nicht jede Idee wird sofort eine klassische Laufveranstaltung – und genau das macht
+              diesen Bereich spannend.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -61,11 +61,7 @@ function ProjektePage() {
             <Figure
               src={p.image}
               alt={p.imageAlt}
-              className={
-                p.imageIsLogo
-                  ? "aspect-[4/3] bg-background"
-                  : "aspect-[4/3]"
-              }
+              className={p.imageIsLogo ? "aspect-[4/3] bg-background" : "aspect-[4/3]"}
               imgClassName={p.imageIsLogo ? "object-contain p-8" : undefined}
               {...(i % 2 === 1 ? {} : {})}
             />
@@ -108,15 +104,14 @@ function ProjektePage() {
           intro={
             <>
               <p>
-                Mich interessieren nicht nur klassische Laufveranstaltungen. Ich mag
-                Formate, die eine zusätzliche Idee mitbringen – eine besondere
-                Strecke, ein ungewöhnliches Zeitmodell, ein spielerisches Element
-                oder einfach einen anderen Blick aufs Laufen.
+                Mich interessieren nicht nur klassische Laufveranstaltungen. Ich mag Formate, die
+                eine zusätzliche Idee mitbringen – eine besondere Strecke, ein ungewöhnliches
+                Zeitmodell, ein spielerisches Element oder einfach einen anderen Blick aufs Laufen.
               </p>
               <p className="mt-4">
-                Manche Ideen werden große Veranstaltungen. Andere bleiben kleine
-                Experimente. Und manche funktionieren vielleicht überhaupt nicht.
-                Aber genau dafür ist dieser Bereich da.
+                Manche Ideen werden große Veranstaltungen. Andere bleiben kleine Experimente. Und
+                manche funktionieren vielleicht überhaupt nicht. Aber genau dafür ist dieser Bereich
+                da.
               </p>
             </>
           }
@@ -130,19 +125,14 @@ function ProjektePage() {
             {pastProjects.map((p) => (
               <li key={p.slug} className="rounded-xl border border-border p-6">
                 <h3 className="text-lg font-bold">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {p.shortDescription}
-                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{p.shortDescription}</p>
               </li>
             ))}
           </ul>
         ) : (
           <p className="prose-bl mt-6 max-w-3xl">
             Abgeschlossene Formate findest du bei{" "}
-            <Link
-              to="/veranstaltungen"
-              className="font-semibold text-brand underline"
-            >
+            <Link to="/veranstaltungen" className="font-semibold text-brand underline">
               meinen Veranstaltungen
             </Link>
             .
@@ -156,9 +146,9 @@ function ProjektePage() {
             Eine Idee muss nicht fertig sein, bevor man darüber spricht.
           </h2>
           <p className="mt-6 text-lg leading-relaxed">
-            Vielleicht hast du selbst ein Laufkonzept im Kopf und weißt noch nicht
-            genau, wie Strecke, Zeitmessung, Ablauf oder Technik funktionieren
-            könnten. Genau solche Fragen finde ich spannend.
+            Vielleicht hast du selbst ein Laufkonzept im Kopf und weißt noch nicht genau, wie
+            Strecke, Zeitmessung, Ablauf oder Technik funktionieren könnten. Genau solche Fragen
+            finde ich spannend.
           </p>
           <div className="mt-8">
             <ActionLink href={site.mailtoProjektidee} variant="onBrand">
