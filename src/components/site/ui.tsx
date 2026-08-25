@@ -36,7 +36,7 @@ export function ActionLink({
   const cls = cn(btnBase, btnVariants[variant], className);
   if (to) {
     return (
-      <Link to={to} hash={hash} className={cls}>
+      <Link to={to} {...(hash ? { hash } : {})} className={cls}>
         {children}
       </Link>
     );
