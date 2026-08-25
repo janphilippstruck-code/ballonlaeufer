@@ -10,33 +10,168 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as LeistungenRouteImport } from './routes/leistungen'
+import { Route as ReferenzenRouteImport } from './routes/referenzen'
+import { Route as UeberMichRouteImport } from './routes/ueber-mich'
+import { Route as VeranstaltungenRouteImport } from './routes/veranstaltungen'
+import { Route as ProjekteIndexRouteImport } from './routes/projekte/index'
+import { Route as ProjekteBallonUltralaufRouteImport } from './routes/projekte/ballon-ultralauf'
+import { Route as ProjekteHammerBackyardUltraRouteImport } from './routes/projekte/hammer-backyard-ultra'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeistungenRoute = LeistungenRouteImport.update({
+  id: '/leistungen',
+  path: '/leistungen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferenzenRoute = ReferenzenRouteImport.update({
+  id: '/referenzen',
+  path: '/referenzen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UeberMichRoute = UeberMichRouteImport.update({
+  id: '/ueber-mich',
+  path: '/ueber-mich',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VeranstaltungenRoute = VeranstaltungenRouteImport.update({
+  id: '/veranstaltungen',
+  path: '/veranstaltungen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjekteIndexRoute = ProjekteIndexRouteImport.update({
+  id: '/projekte/',
+  path: '/projekte/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjekteBallonUltralaufRoute = ProjekteBallonUltralaufRouteImport.update({
+  id: '/projekte/ballon-ultralauf',
+  path: '/projekte/ballon-ultralauf',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjekteHammerBackyardUltraRoute =
+  ProjekteHammerBackyardUltraRouteImport.update({
+    id: '/projekte/hammer-backyard-ultra',
+    path: '/projekte/hammer-backyard-ultra',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/leistungen': typeof LeistungenRoute
+  '/referenzen': typeof ReferenzenRoute
+  '/ueber-mich': typeof UeberMichRoute
+  '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/ballon-ultralauf': typeof ProjekteBallonUltralaufRoute
+  '/projekte/hammer-backyard-ultra': typeof ProjekteHammerBackyardUltraRoute
+  '/projekte/': typeof ProjekteIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/leistungen': typeof LeistungenRoute
+  '/referenzen': typeof ReferenzenRoute
+  '/ueber-mich': typeof UeberMichRoute
+  '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/ballon-ultralauf': typeof ProjekteBallonUltralaufRoute
+  '/projekte/hammer-backyard-ultra': typeof ProjekteHammerBackyardUltraRoute
+  '/projekte': typeof ProjekteIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/leistungen': typeof LeistungenRoute
+  '/referenzen': typeof ReferenzenRoute
+  '/ueber-mich': typeof UeberMichRoute
+  '/veranstaltungen': typeof VeranstaltungenRoute
+  '/projekte/ballon-ultralauf': typeof ProjekteBallonUltralaufRoute
+  '/projekte/hammer-backyard-ultra': typeof ProjekteHammerBackyardUltraRoute
+  '/projekte/': typeof ProjekteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/leistungen'
+    | '/referenzen'
+    | '/ueber-mich'
+    | '/veranstaltungen'
+    | '/projekte/ballon-ultralauf'
+    | '/projekte/hammer-backyard-ultra'
+    | '/projekte/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/leistungen'
+    | '/referenzen'
+    | '/ueber-mich'
+    | '/veranstaltungen'
+    | '/projekte/ballon-ultralauf'
+    | '/projekte/hammer-backyard-ultra'
+    | '/projekte'
+  id:
+    | '__root__'
+    | '/'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/leistungen'
+    | '/referenzen'
+    | '/ueber-mich'
+    | '/veranstaltungen'
+    | '/projekte/ballon-ultralauf'
+    | '/projekte/hammer-backyard-ultra'
+    | '/projekte/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  ImpressumRoute: typeof ImpressumRoute
+  KontaktRoute: typeof KontaktRoute
+  LeistungenRoute: typeof LeistungenRoute
+  ReferenzenRoute: typeof ReferenzenRoute
+  UeberMichRoute: typeof UeberMichRoute
+  VeranstaltungenRoute: typeof VeranstaltungenRoute
+  ProjekteBallonUltralaufRoute: typeof ProjekteBallonUltralaufRoute
+  ProjekteHammerBackyardUltraRoute: typeof ProjekteHammerBackyardUltraRoute
+  ProjekteIndexRoute: typeof ProjekteIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +183,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leistungen': {
+      id: '/leistungen'
+      path: '/leistungen'
+      fullPath: '/leistungen'
+      preLoaderRoute: typeof LeistungenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referenzen': {
+      id: '/referenzen'
+      path: '/referenzen'
+      fullPath: '/referenzen'
+      preLoaderRoute: typeof ReferenzenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ueber-mich': {
+      id: '/ueber-mich'
+      path: '/ueber-mich'
+      fullPath: '/ueber-mich'
+      preLoaderRoute: typeof UeberMichRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/veranstaltungen': {
+      id: '/veranstaltungen'
+      path: '/veranstaltungen'
+      fullPath: '/veranstaltungen'
+      preLoaderRoute: typeof VeranstaltungenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projekte/': {
+      id: '/projekte/'
+      path: '/projekte'
+      fullPath: '/projekte/'
+      preLoaderRoute: typeof ProjekteIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projekte/ballon-ultralauf': {
+      id: '/projekte/ballon-ultralauf'
+      path: '/projekte/ballon-ultralauf'
+      fullPath: '/projekte/ballon-ultralauf'
+      preLoaderRoute: typeof ProjekteBallonUltralaufRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projekte/hammer-backyard-ultra': {
+      id: '/projekte/hammer-backyard-ultra'
+      path: '/projekte/hammer-backyard-ultra'
+      fullPath: '/projekte/hammer-backyard-ultra'
+      preLoaderRoute: typeof ProjekteHammerBackyardUltraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  ImpressumRoute: ImpressumRoute,
+  KontaktRoute: KontaktRoute,
+  LeistungenRoute: LeistungenRoute,
+  ReferenzenRoute: ReferenzenRoute,
+  UeberMichRoute: UeberMichRoute,
+  VeranstaltungenRoute: VeranstaltungenRoute,
+  ProjekteBallonUltralaufRoute: ProjekteBallonUltralaufRoute,
+  ProjekteHammerBackyardUltraRoute: ProjekteHammerBackyardUltraRoute,
+  ProjekteIndexRoute: ProjekteIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
