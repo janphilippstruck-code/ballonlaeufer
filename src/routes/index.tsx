@@ -428,11 +428,11 @@ function StartPage() {
           title="Für andere Veranstaltungen im Einsatz."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.6fr_1fr]">
-          <article className="overflow-hidden rounded-xl border border-border bg-background">
+          <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-background">
             <Figure
               src={img.refOsnabrueck}
               alt="Aufbau der Zeitmessung beim Osnabrücker 6-Stunden-Lauf"
-              className="aspect-[16/9] rounded-none"
+              className="aspect-[16/9] rounded-none lg:aspect-auto lg:flex-1"
             />
             <div className="p-6 md:p-8">
               <h3 className="text-2xl font-bold">Osnabrücker 6-Stunden-Lauf</h3>
