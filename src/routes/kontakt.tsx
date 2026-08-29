@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { site } from "@/data/site";
+import { site, canonical } from "@/data/site";
 import { ActionLink, Label, Section } from "@/components/site/ui";
 
 export const Route = createFileRoute("/kontakt")({
@@ -20,6 +20,7 @@ export const Route = createFileRoute("/kontakt")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: canonical("/kontakt") }],
   }),
   component: KontaktPage,
 });

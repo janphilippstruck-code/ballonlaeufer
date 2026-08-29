@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { site } from "@/data/site";
+import { site, canonical } from "@/data/site";
 import { projects } from "@/data/projects";
 import {
   ActionLink,
@@ -37,6 +37,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: canonical("/") }],
   }),
   component: StartPage,
 });
@@ -99,13 +100,16 @@ function StartPage() {
               </ActionLink>
             </div>
           </div>
-          <Figure
-            src={img.startHero}
-            alt="Jan-Philipp Struck bei der Eröffnung von BORNE TO RUN im Start- und Zielbereich"
-            className="aspect-[4/3] lg:aspect-[5/4]"
-            position="72% center"
-            priority
-          />
+          <figure className="aspect-[4/3] overflow-hidden rounded-xl bg-surface lg:aspect-[5/4]">
+            <img
+              src={img.startHero}
+              alt="Jan-Philipp Struck bei der Eröffnung von BORNE TO RUN im Start- und Zielbereich"
+              className="h-full w-full scale-[1.12] object-cover object-[68%_center] lg:scale-[1.35] lg:object-[78%_46%]"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </figure>
         </div>
       </section>
 
@@ -192,10 +196,6 @@ function StartPage() {
                     Organisieren wurden Zeitmessung, Moderation und immer mehr
                     Aufgaben rund um Laufveranstaltungen.
                   </p>
-                  <p className="mt-4">
-                    Heute verbinde ich beide Perspektiven: die des Läufers und die
-                    des Veranstalters.
-                  </p>
                 </>
               }
             />
@@ -279,10 +279,6 @@ function StartPage() {
                     einen eigenen Dienstleister. Auf Wunsch verbinde ich
                     Zeitmessung mit Moderation, Musik und technischer Betreuung
                     rund um Start und Ziel.
-                  </p>
-                  <p className="mt-4">
-                    Das spart Schnittstellen und sorgt dafür, dass jemand vor Ort
-                    den gesamten Veranstaltungsablauf im Blick hat.
                   </p>
                 </>
               }
@@ -432,11 +428,11 @@ function StartPage() {
           title="Für andere Veranstaltungen im Einsatz."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.6fr_1fr]">
-          <article className="overflow-hidden rounded-xl border border-border bg-background">
+          <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-background">
             <Figure
               src={img.refOsnabrueck}
               alt="Aufbau der Zeitmessung beim Osnabrücker 6-Stunden-Lauf"
-              className="aspect-[16/9] rounded-none"
+              className="aspect-[16/9] rounded-none lg:aspect-auto lg:flex-1"
             />
             <div className="p-6 md:p-8">
               <h3 className="text-2xl font-bold">Osnabrücker 6-Stunden-Lauf</h3>
@@ -448,8 +444,8 @@ function StartPage() {
           <div className="grid gap-6">
             <article className="overflow-hidden rounded-xl border border-border bg-background">
               <Figure
-                src={img.refFreetrail}
-                alt="Zeitmessung beim FREETRAIL Waldlauf"
+                src={img.refFreetrailMonitor}
+                alt="Zeitmessung mit Ergebnismonitor beim FREETRAIL Waldlauf"
                 className="aspect-[16/10] rounded-none"
               />
               <div className="p-6">
@@ -459,11 +455,19 @@ function StartPage() {
                 </p>
               </div>
             </article>
-            <article className="rounded-xl border border-border bg-background p-6">
-              <h3 className="text-xl font-bold">BORNE TO RUN</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Mitorganisation · Zeitmessung · Moderation · Musik & Technik
-              </p>
+            <article className="overflow-hidden rounded-xl border border-border bg-background">
+              <Figure
+                src={img.refBtrJanMarioNeu}
+                alt="Jan-Philipp Struck und Mario im Start- und Zielbereich von BORNE TO RUN"
+                className="aspect-[16/10] rounded-none"
+                position="center 35%"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold">BORNE TO RUN</h3>
+                <p className="mt-2 text-sm font-semibold text-brand">
+                  Mitorganisation · Zeitmessung · Moderation · Musik & Technik
+                </p>
+              </div>
             </article>
           </div>
         </div>
@@ -506,9 +510,6 @@ function StartPage() {
               Veranstaltung anfragen
             </ActionLink>
           </div>
-          <p className="mt-4 text-sm opacity-90">
-            Auch einzelne Leistungen sind möglich.
-          </p>
         </div>
       </Section>
     </>

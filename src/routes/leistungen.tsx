@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { site } from "@/data/site";
+import { site, canonical } from "@/data/site";
 import {
   ActionLink,
   BulletList,
@@ -32,6 +32,7 @@ export const Route = createFileRoute("/leistungen")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: canonical("/leistungen") }],
   }),
   component: LeistungenPage,
 });

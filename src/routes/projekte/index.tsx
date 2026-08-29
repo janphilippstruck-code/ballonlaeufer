@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { site } from "@/data/site";
+import { site, canonical } from "@/data/site";
 import { pastProjects, projects } from "@/data/projects";
 import {
   ActionLink,
@@ -28,6 +28,7 @@ export const Route = createFileRoute("/projekte/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: canonical("/projekte") }],
   }),
   component: ProjektePage,
 });

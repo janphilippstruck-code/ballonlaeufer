@@ -29,14 +29,17 @@ export function Header() {
       <div
         className={cn(
           "container-bl flex items-center justify-between transition-all",
-          scrolled ? "h-16 md:h-[68px]" : "h-[72px] md:h-[88px]",
+          scrolled ? "h-16 md:h-[76px]" : "h-[68px] md:h-[100px]",
         )}
       >
         <Link to="/" className="flex items-center" aria-label="Ballonläufer – zur Startseite">
           <img
             src={img.logoFullTransparent}
             alt="Ballonläufer"
-            className={cn("w-auto transition-all", scrolled ? "h-9" : "h-10 md:h-12")}
+            className={cn(
+              "h-auto w-[170px] object-contain transition-all sm:w-[190px]",
+              scrolled ? "md:w-[210px]" : "md:w-[240px]",
+            )}
           />
         </Link>
 
