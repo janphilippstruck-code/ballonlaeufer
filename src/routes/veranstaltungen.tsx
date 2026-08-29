@@ -163,7 +163,7 @@ function VeranstaltungenPage() {
               src={img.histBallonUltra125Meilen}
               alt="Veranstaltungsschild des Ballon-Ultralaufs über 125 Meilen bzw. 200 Kilometer"
               className="aspect-[16/10] rounded-none"
-              position="center 40%"
+              position="center 22%"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold">Ballon-Ultralauf 125 Meilen</h3>
@@ -221,7 +221,7 @@ function VeranstaltungenPage() {
               src={img.histKostuemWendepunktlauf}
               alt="Gruppe verkleideter Läuferinnen und Läufer beim Kostüm-Wendepunktlauf"
               className="aspect-[16/10] rounded-none"
-              position="center 30%"
+              position="center 72%"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold">
