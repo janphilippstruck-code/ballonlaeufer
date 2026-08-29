@@ -15,6 +15,13 @@ export const site = {
   externalUltraVerfolgt: "https://ultraverfolgt.xn--ballonlufer-r8a.de/",
 } as const;
 
+/** Kanonische Hauptdomain (ASCII-Form von ballonläufer.de). */
+export const siteOrigin = "https://xn--ballonlufer-r8a.de";
+
+export function canonical(path: string) {
+  return `${siteOrigin}${path === "/" ? "/" : path}`;
+}
+
 /** Zentral editierbar: geplanter Termin Hammer Backyard Ultra. */
 export const hammerBackyardDate = "17. April 2027";
 
