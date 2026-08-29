@@ -93,8 +93,8 @@ function UeberMichPage() {
             />
           </div>
           <Figure
-            src={img.aboutFirstMarathon}
-            alt="Jan-Philipp Struck in seiner Anfangszeit als Läufer"
+            src={img.aboutLaufbildTreppe}
+            alt="Jan-Philipp Struck beim Laufen auf einer Treppe"
             className="aspect-[4/3]"
           />
         </div>
@@ -160,19 +160,20 @@ function UeberMichPage() {
               }
             />
             <p className="mt-8 inline-block border-l-2 border-brand pl-5 text-lg font-bold">
-              UNION Sportler des Jahres 2018 · Platz 1 · Laufen
+              Sportler des Jahres 2018 im Kreis Unna · Platz 1 · Laufen
             </p>
           </div>
           <div className="grid gap-5">
             <Figure
-              src={img.aboutSdjGroup}
-              alt="Gruppenfoto der Ehrung UNION Sportler des Jahres 2018"
+              src={img.aboutSdjGruppeNeu}
+              alt="Gruppenfoto der Geehrten bei der Sportlerehrung 2018 im Kreis Unna"
               className="aspect-[4/3]"
             />
             <Figure
-              src={img.aboutSdjStage}
-              alt="Jan-Philipp Struck auf der Bühne bei der Ehrung 2018"
+              src={img.aboutSdjBuehneNeu}
+              alt="Ehrungsmoment auf der Bühne bei der Sportlerehrung 2018"
               className="aspect-[16/9] max-w-xs"
+              position="center 22%"
             />
           </div>
         </div>

@@ -70,7 +70,7 @@ function VeranstaltungenPage() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHead
-              title="Ballon-Ultralauf"
+              title="Ballon-Ultralauf Welver"
               intro={
                 <>
                   <p className="text-lg font-semibold text-foreground">
@@ -110,15 +110,20 @@ function VeranstaltungenPage() {
               ))}
             </ul>
           </div>
-          <div className="grid gap-5">
+          <div className="grid gap-5 sm:grid-cols-2">
             <Figure
-              src={img.histBallonUltraStart}
-              alt="Läuferinnen und Läufer beim Start des Ballon-Ultralaufs 2019"
+              src={img.histBallonUltraEventaufbau}
+              alt="Aufbau des Veranstaltungsbereichs beim Ballon-Ultralauf in Welver"
+              className="aspect-[4/3] sm:col-span-2"
+            />
+            <Figure
+              src={img.histBallonUltraJubelgruppe}
+              alt="Jubelnde Läuferinnen und Läufer beim Ballon-Ultralauf in Welver"
               className="aspect-[4/3]"
             />
             <Figure
-              src={img.histBallonUltraForest}
-              alt="Waldatmosphäre beim Ballon-Ultralauf"
+              src={img.histBallonUltraGruppenfoto}
+              alt="Gruppenfoto der Teilnehmenden beim Ballon-Ultralauf in Welver"
               className="aspect-[4/3]"
             />
           </div>
@@ -139,18 +144,33 @@ function VeranstaltungenPage() {
           }
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article className="rounded-xl border border-border p-6">
-            <h3 className="text-xl font-bold">Ballonathon Backyard</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Wiederkehrendes Rundenformat aus dem Ballonläufer-Umfeld.
-            </p>
+          <article className="overflow-hidden rounded-xl border border-border">
+            <Figure
+              src={img.histBallonathonBackyardGlocke}
+              alt="Glocke und Unterlagen des Ballonathon Backyard"
+              className="aspect-[16/10] rounded-none"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold">Ballonathon Backyard</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Wiederkehrendes Rundenformat aus dem Ballonläufer-Umfeld.
+              </p>
+            </div>
           </article>
 
-          <article className="rounded-xl border border-border p-6">
-            <h3 className="text-xl font-bold">Ballon-Ultralauf 125 Meilen</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Neun Etappen. Bis zu 200 Kilometer.
-            </p>
+          <article className="overflow-hidden rounded-xl border border-border">
+            <Figure
+              src={img.histBallonUltra125Meilen}
+              alt="Veranstaltungsschild des Ballon-Ultralaufs über 125 Meilen bzw. 200 Kilometer"
+              className="aspect-[16/10] rounded-none"
+              position="center 40%"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold">Ballon-Ultralauf 125 Meilen</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Neun Etappen. Bis zu 200 Kilometer.
+              </p>
+            </div>
           </article>
 
           <article className="overflow-hidden rounded-xl border border-border">
@@ -196,15 +216,23 @@ function VeranstaltungenPage() {
             </div>
           </article>
 
-          <article className="rounded-xl border border-border p-6">
-            <h3 className="text-xl font-bold">
-              Kostüm-Wendepunktlauf & Ballonathons
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Manchmal entsteht ein Format einfach aus einer Schnapsidee im
-              Lauftreff. Nicht jede Idee muss vollkommen vernünftig sein – gelaufen
-              wird trotzdem.
-            </p>
+          <article className="overflow-hidden rounded-xl border border-border">
+            <Figure
+              src={img.histKostuemWendepunktlauf}
+              alt="Gruppe verkleideter Läuferinnen und Läufer beim Kostüm-Wendepunktlauf"
+              className="aspect-[16/10] rounded-none"
+              position="center 30%"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold">
+                Kostüm-Wendepunktlauf & Ballonathons
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Manchmal entsteht ein Format einfach aus einer Schnapsidee im
+                Lauftreff. Nicht jede Idee muss vollkommen vernünftig sein – gelaufen
+                wird trotzdem.
+              </p>
+            </div>
           </article>
         </div>
       </Section>
@@ -269,9 +297,10 @@ function VeranstaltungenPage() {
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <Figure
-              src={img.refBtrJanMario}
-              alt="Jan-Philipp Struck und Mario bei BORNE TO RUN im Start- und Zielbereich"
-              className="aspect-[4/5] sm:col-span-2"
+              src={img.refBtrJanMarioNeu}
+              alt="Jan-Philipp Struck und Mario unter dem Start- und Zielbanner von BORNE TO RUN"
+              className="aspect-[16/10] sm:col-span-2"
+              position="center 35%"
             />
             <Figure
               src={img.eventBtrMedal}

@@ -132,8 +132,8 @@ function ReferenzenPage() {
             </p>
           </div>
           <Figure
-            src={img.refFreetrail}
-            alt="Zeitmessung und Musik beim FREETRAIL Waldlauf"
+            src={img.refFreetrailMonitor}
+            alt="Jan-Philipp Struck am großen Ergebnismonitor beim FREETRAIL Waldlauf"
             className="aspect-[4/3] lg:order-first"
           />
         </div>
@@ -143,9 +143,10 @@ function ReferenzenPage() {
       <Section tone="ink">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Figure
-            src={img.refBtrJanMario}
-            alt="Jan-Philipp Struck und Mario bei BORNE TO RUN im Start- und Zielbereich"
-            className="aspect-[4/3]"
+            src={img.refBtrJanMarioNeu}
+            alt="Jan-Philipp Struck und Mario unter dem Start- und Zielbanner von BORNE TO RUN"
+            className="aspect-[16/10]"
+            position="center 35%"
           />
           <div>
             <p className="label-bl">
@@ -252,11 +253,19 @@ function ReferenzenPage() {
             </div>
           </article>
 
-          <article className="rounded-xl border border-border bg-background p-6">
-            <h3 className="text-xl font-bold">Cube Run</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              12-/24-Stunden-Format mit Zeitmessung und Musik.
-            </p>
+          <article className="overflow-hidden rounded-xl border border-border bg-background">
+            <Figure
+              src={img.refCubeRunNacht}
+              alt="Nächtliches Veranstaltungsareal mit Lichterkette beim Cube Run"
+              className="aspect-[16/10] rounded-none"
+              position="center 45%"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold">Cube Run</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                12-/24-Stunden-Format mit Zeitmessung und Musik.
+              </p>
+            </div>
           </article>
 
           <article className="overflow-hidden rounded-xl border border-border bg-background">
