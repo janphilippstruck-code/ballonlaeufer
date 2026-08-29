@@ -37,10 +37,8 @@ export function Header() {
             src={img.logoFullTransparent}
             alt="Ballonläufer"
             className={cn(
-              "h-auto w-auto max-w-[170px] object-contain transition-all sm:max-w-[200px]",
-              scrolled
-                ? "max-h-9 md:max-h-11 md:max-w-[210px]"
-                : "max-h-10 md:max-h-[62px] md:max-w-[250px]",
+              "h-auto w-[170px] object-contain transition-all sm:w-[190px]",
+              scrolled ? "md:w-[210px]" : "md:w-[240px]",
             )}
           />
         </Link>
