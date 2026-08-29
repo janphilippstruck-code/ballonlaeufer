@@ -12,15 +12,15 @@ import {
 export const Route = createFileRoute("/projekte/ballon-ultralauf")({
   head: () => ({
     meta: [
-      { title: "Ballon-Ultralauf – die Rückkehr | Ballonläufer" },
+      { title: "Ballon-Ultralauf Welver | Ballonläufer" },
       {
         name: "description",
         content:
-          "Der Ballon-Ultralauf kommt zurück: ein familiärer Ultralauf, mit dem 2018 die Veranstaltergeschichte von Ballonläufer begann. In Planung für 2027.",
+          "Der Ballon-Ultralauf in Welver kommt zurück: ein familiärer Ultralauf, mit dem 2018 die Veranstaltergeschichte von Ballonläufer begann. In Planung für 2027.",
       },
       {
         property: "og:title",
-        content: "Ballon-Ultralauf – die Rückkehr | Ballonläufer",
+        content: "Ballon-Ultralauf Welver – die Rückkehr | Ballonläufer",
       },
       {
         property: "og:description",
@@ -43,14 +43,14 @@ function BallonUltralaufPage() {
           <div>
             <StatusBadge>In Planung · 2027</StatusBadge>
             <h1 className="mt-5 text-4xl leading-tight md:text-5xl lg:text-[3.4rem]">
-              Der Ballon-Ultralauf kommt zurück.
+              Der Ballon-Ultralauf Welver kommt zurück.
             </h1>
             <p className="mt-4 text-xl font-semibold text-brand">
               Zurück zu den Wurzeln – mit der Erfahrung von heute.
             </p>
             <span className="rule-bl mt-6" aria-hidden="true" />
             <p className="prose-bl mt-6">
-              Mit dem ersten Ballon-Ultralauf begann 2018 meine Geschichte als
+              Mit dem ersten Ballon-Ultralauf in Welver begann 2018 meine Geschichte als
               Veranstalter. Nach mehreren Jahren Pause soll das Format 2027 neu
               aufgelegt werden.
             </p>
@@ -62,9 +62,10 @@ function BallonUltralaufPage() {
             <Chips items={["Ultralauf", "Rundkurs", "familiäres Format", "2027"]} />
           </div>
           <Figure
-            src={img.ballonUltraKeyvisual}
-            alt="Keyvisual der Neuauflage des Ballon-Ultralaufs"
-            className="aspect-[4/3]"
+            src={img.ballonUltraWelverLogo}
+            alt="Vorläufiges Logo des Ballon-Ultralaufs Welver"
+            className="aspect-[4/3] bg-background"
+            imgClassName="object-contain p-8"
             priority
           />
         </div>
@@ -108,7 +109,7 @@ function BallonUltralaufPage() {
 
       <Section tone="brand">
         <div className="max-w-3xl">
-          <h2 className="text-3xl md:text-4xl">Frage zum Ballon-Ultralauf?</h2>
+          <h2 className="text-3xl md:text-4xl">Frage zum Ballon-Ultralauf Welver?</h2>
           <p className="mt-6 text-lg leading-relaxed">
             Schreib mir gern kurz, wenn du mehr über die Neuauflage wissen möchtest.
           </p>
