@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { site } from "@/data/site";
+import { site, canonical } from "@/data/site";
 import {
   ActionLink,
   Chips,
@@ -30,6 +30,7 @@ export const Route = createFileRoute("/projekte/ballon-ultralauf")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: canonical("/projekte/ballon-ultralauf") }],
   }),
   component: BallonUltralaufPage,
 });

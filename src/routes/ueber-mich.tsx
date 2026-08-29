@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { site } from "@/data/site";
+import { site, canonical } from "@/data/site";
 import { projects } from "@/data/projects";
 import {
   ActionLink,
@@ -28,6 +28,7 @@ export const Route = createFileRoute("/ueber-mich")({
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: canonical("/ueber-mich") }],
   }),
   component: UeberMichPage,
 });

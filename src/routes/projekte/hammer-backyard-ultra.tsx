@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { hammerBackyardDate, site } from "@/data/site";
+import { hammerBackyardDate, site, canonical } from "@/data/site";
 import {
   ActionLink,
   BulletList,
@@ -28,6 +28,7 @@ export const Route = createFileRoute("/projekte/hammer-backyard-ultra")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: canonical("/projekte/hammer-backyard-ultra") }],
   }),
   component: HammerBackyardPage,
 });
