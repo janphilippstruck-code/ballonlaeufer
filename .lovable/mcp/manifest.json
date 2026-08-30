@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "sdk_version": "0.28.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "ballonlaufer",
+      "version": "0.1.0",
+      "title": "Ballonläufer"
+    },
+    "tools": [
+      {
+        "name": "get_site_info",
+        "title": "Website-Infos",
+        "description": "Liefert Basisinformationen zu Ballonläufer: Name, Claim, Inhaber, Kontakt-E-Mail, Domain, Navigation und geplanter Termin des Hammer Backyard Ultra.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "claim": {
+              "type": "string"
+            },
+            "owner": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "website": {
+              "type": "string"
+            },
+            "pages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "label",
+                  "path"
+                ]
+              }
+            },
+            "hammerBackyardUltraDate": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "claim",
+            "owner",
+            "email",
+            "website",
+            "pages",
+            "hammerBackyardUltraDate"
+          ]
+        }
+      },
+      {
+        "name": "list_projects",
+        "title": "Projekte auflisten",
+        "description": "Listet die öffentlichen Laufprojekte von Ballonläufer (z. B. Ultra verfolgt, Ballon-Ultralauf Welver, Hammer Backyard Ultra) mit Status, Jahr, Kategorie und Beschreibung.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "description": "Optionaler Slug, um nur ein einzelnes Projekt zurückzugeben.",
+              "type": "string"
+            }
+          }
+        },
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "projects": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "slug": {
+                    "type": "string"
+                  },
+                  "shortDescription": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string"
+                  },
+                  "facts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "link": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "title",
+                  "slug",
+                  "shortDescription",
+                  "description",
+                  "category",
+                  "status",
+                  "year",
+                  "facts",
+                  "link"
+                ]
+              }
+            }
+          },
+          "required": [
+            "projects"
+          ]
+        }
+      },
+      {
+        "name": "list_references",
+        "title": "Referenzen auflisten",
+        "description": "Listet die wiederkehrenden Veranstaltungen, die Ballonläufer betreut, jeweils mit Leistungsumfang und Startjahr.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "scope": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "since": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "scope",
+                  "since"
+                ]
+              }
+            }
+          },
+          "required": [
+            "references"
+          ]
+        }
+      },
+      {
+        "name": "get_chronicle",
+        "title": "Chronik der Veranstaltungen",
+        "description": "Gibt die Jahres-Chronik der Ballonläufer-Veranstaltungen zurück – von den ersten Ballon-Ultraläufen bis zu den geplanten Formaten.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "chronicle": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "year",
+                  "text"
+                ]
+              }
+            }
+          },
+          "required": [
+            "chronicle"
+          ]
+        }
+      }
+    ]
+  }
+}
