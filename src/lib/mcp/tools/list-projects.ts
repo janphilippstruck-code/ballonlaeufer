@@ -14,6 +14,21 @@ export default defineTool({
       .optional()
       .describe("Optionaler Slug, um nur ein einzelnes Projekt zurückzugeben."),
   },
+  outputSchema: {
+    projects: z.array(
+      z.object({
+        title: z.string(),
+        slug: z.string(),
+        shortDescription: z.string(),
+        description: z.string(),
+        category: z.string(),
+        status: z.string(),
+        year: z.string(),
+        facts: z.array(z.string()),
+        link: z.string(),
+      }),
+    ),
+  },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ slug }) => {
     const items = projects

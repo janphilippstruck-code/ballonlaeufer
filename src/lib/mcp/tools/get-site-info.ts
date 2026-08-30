@@ -1,4 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
+import { z } from "zod";
 import { site, siteOrigin, nav, hammerBackyardDate } from "@/data/site";
 
 export default defineTool({
@@ -7,6 +8,15 @@ export default defineTool({
   description:
     "Liefert Basisinformationen zu Ballonläufer: Name, Claim, Inhaber, Kontakt-E-Mail, Domain, Navigation und geplanter Termin des Hammer Backyard Ultra.",
   inputSchema: {},
+  outputSchema: {
+    name: z.string(),
+    claim: z.string(),
+    owner: z.string(),
+    email: z.string(),
+    website: z.string(),
+    pages: z.array(z.object({ label: z.string(), path: z.string() })),
+    hammerBackyardUltraDate: z.string(),
+  },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const info = {
