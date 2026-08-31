@@ -51,7 +51,7 @@ export const projects: Project[] = [
     slug: "ballon-ultralauf",
     shortDescription: "Zurück zu den Wurzeln.",
     longDescription: [
-      "Mit dem Ballon-Ultralauf in Welver hat 2018 meine Geschichte als Veranstalter angefangen. Nach mehreren Jahren Pause soll das Format zurückkommen – diesmal mit all der Erfahrung, Technik und Organisation, die seit dem ersten Lauf dazugekommen sind.",
+      "Mit dem ersten Ballon-Ultralauf begann 2018 meine Geschichte als Veranstalter. 2027 bekommt das Format in Welver eine neue Heimat – diesmal mit all der Erfahrung, Technik und Organisation, die seit dem ersten Lauf dazugekommen sind.",
       "Die Grundidee soll dabei bleiben: ein familiärer Ultralauf, bei dem das gemeinsame Laufen wichtiger ist als möglichst viel Eventshow.",
     ],
     category: "Ultralauf",
