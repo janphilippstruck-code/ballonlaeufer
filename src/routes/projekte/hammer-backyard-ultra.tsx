@@ -37,6 +37,18 @@ export const Route = createFileRoute("/projekte/hammer-backyard-ultra")({
 function HammerBackyardPage() {
   return (
     <>
+      <section className="border-b border-border bg-brand text-brand-foreground">
+        <div className="container-bl flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-base font-semibold">
+            Diese Seite ist umgezogen: Alle aktuellen Infos zum Hammer Backyard Ultra gibt es auf
+            der eigenen Projektseite.
+          </p>
+          <ActionLink href="https://hammerbackyard.xn--ballonlufer-r8a.de/" external variant="onBrand">
+            Projektseite öffnen ↗
+          </ActionLink>
+        </div>
+      </section>
+
       <section className="border-b border-border bg-surface">
         <div className="container-bl grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
           <div>
