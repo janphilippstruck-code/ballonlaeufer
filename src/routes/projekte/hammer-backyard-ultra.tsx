@@ -27,8 +27,9 @@ export const Route = createFileRoute("/projekte/hammer-backyard-ultra")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "noindex,follow" },
     ],
-    links: [{ rel: "canonical", href: canonical("/projekte/hammer-backyard-ultra") }],
+    links: [{ rel: "canonical", href: "https://hammerbackyard.xn--ballonlufer-r8a.de/" }],
   }),
   component: HammerBackyardPage,
 });

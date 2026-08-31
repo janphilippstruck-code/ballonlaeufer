@@ -29,8 +29,9 @@ export const Route = createFileRoute("/projekte/ballon-ultralauf")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "noindex,follow" },
     ],
-    links: [{ rel: "canonical", href: canonical("/projekte/ballon-ultralauf") }],
+    links: [{ rel: "canonical", href: "https://ballonultralauf.xn--ballonlufer-r8a.de/" }],
   }),
   component: BallonUltralaufPage,
 });
