@@ -1,29 +1,29 @@
-# Welcome to your Lovable project
+# Ballonläufer – Vom Läufer. Für Läufer.
 
-This project was built with [Lovable](https://lovable.dev).
+Website von Ballonläufer (Jan-Philipp Struck): Zeitmessung, Moderation und Unterstützung für
+Laufveranstaltungen.
 
-## Build with Lovable
+- Live: <https://xn--ballonlufer-r8a.de/> (angezeigt als ballonläufer.de)
+- Kontakt: janphilippstruck@gmx.de
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Projektseiten
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- Ultra verfolgt: <https://ultraverfolgt.xn--ballonlufer-r8a.de/>
+- Ballon-Ultralauf Welver: <https://ballonultralauf.xn--ballonlufer-r8a.de/>
+- Hammer Backyard Ultra: <https://hammerbackyard.xn--ballonlufer-r8a.de/>
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Entwicklung
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
 npm i
 npm run dev
 ```
 
-## Built with
+## Technik
 
 - TanStack Start
 - TypeScript
 - React
 - Tailwind CSS
+
+Inhalte und Bilder liegen zentral in `src/data/` bzw. `src/lib/images.ts`.
