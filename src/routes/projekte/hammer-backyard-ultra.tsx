@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { hammerBackyardDate, site, canonical } from "@/data/site";
+import { hammerBackyardDate, site } from "@/data/site";
 import {
   ActionLink,
   BulletList,

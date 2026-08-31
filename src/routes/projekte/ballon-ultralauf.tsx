@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { site, canonical } from "@/data/site";
+import { site } from "@/data/site";
 import {
   ActionLink,
   Chips,
