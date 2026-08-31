@@ -61,9 +61,9 @@ export const projects: Project[] = [
     imageAlt: "Vorläufiges Logo des Ballon-Ultralaufs Welver",
     imageIsLogo: true,
     facts: ["Ultralauf", "Rundkurs", "familiäres Format", "2027"],
-    href: "/projekte/ballon-ultralauf",
-    linkLabel: "Mehr erfahren →",
-    external: false,
+    href: "https://ballonultralauf.xn--ballonlufer-r8a.de/",
+    linkLabel: "Projektseite öffnen ↗",
+    external: true,
     featured: true,
   },
   {
