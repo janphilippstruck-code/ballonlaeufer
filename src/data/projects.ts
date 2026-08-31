@@ -81,9 +81,9 @@ export const projects: Project[] = [
     imageAlt: "Logo des Hammer Backyard Ultra",
     imageIsLogo: true,
     facts: ["6,706 km", "jede Stunde", "Hamm", "Open End"],
-    href: "/projekte/hammer-backyard-ultra",
-    linkLabel: "Hammer Backyard Ultra →",
-    external: false,
+    href: "https://hammerbackyard.xn--ballonlufer-r8a.de/",
+    linkLabel: "Projektseite öffnen ↗",
+    external: true,
     featured: true,
   },
 ];
