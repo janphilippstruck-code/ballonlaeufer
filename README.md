@@ -1,28 +1,29 @@
-# Master Prompt Guide
+# Ballonläufer – Vom Läufer. Für Läufer.
 
-Der Auftrag steht im lovable Master prompt 
+Website von Ballonläufer (Jan-Philipp Struck): Zeitmessung, Moderation und Unterstützung für
+Laufveranstaltungen.
 
-Bitte exakt daran halten
+- Live: <https://xn--ballonlufer-r8a.de/> (angezeigt als ballonläufer.de)
+- Kontakt: janphilippstruck@gmx.de
 
-This project was built with [Lovable](https://lovable.dev).
+## Projektseiten
 
-**Live app**: https://ballonlaeufer.lovable.app
+- Ultra verfolgt: <https://ultraverfolgt.xn--ballonlufer-r8a.de/>
+- Ballon-Ultralauf Welver: <https://ballonultralauf.xn--ballonlufer-r8a.de/>
+- Hammer Backyard Ultra: <https://hammerbackyard.xn--ballonlufer-r8a.de/>
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ce4a300a-c3ee-4501-bb92-89ba36236bb0).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Entwicklung
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Technik
+
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS
+
+Inhalte und Bilder liegen zentral in `src/data/` bzw. `src/lib/images.ts`.

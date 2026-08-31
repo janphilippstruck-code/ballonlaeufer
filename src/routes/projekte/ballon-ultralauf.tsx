@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/images";
-import { site, canonical } from "@/data/site";
+import { site } from "@/data/site";
 import {
   ActionLink,
   Chips,
@@ -29,8 +29,9 @@ export const Route = createFileRoute("/projekte/ballon-ultralauf")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "noindex,follow" },
     ],
-    links: [{ rel: "canonical", href: canonical("/projekte/ballon-ultralauf") }],
+    links: [{ rel: "canonical", href: "https://ballonultralauf.xn--ballonlufer-r8a.de/" }],
   }),
   component: BallonUltralaufPage,
 });
@@ -38,6 +39,18 @@ export const Route = createFileRoute("/projekte/ballon-ultralauf")({
 function BallonUltralaufPage() {
   return (
     <>
+      <section className="border-b border-border bg-brand text-brand-foreground">
+        <div className="container-bl flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-base font-semibold">
+            Diese Seite ist umgezogen: Alle aktuellen Infos zum Ballon-Ultralauf gibt es auf der
+            eigenen Projektseite.
+          </p>
+          <ActionLink href="https://ballonultralauf.xn--ballonlufer-r8a.de/" external variant="onBrand">
+            Projektseite öffnen ↗
+          </ActionLink>
+        </div>
+      </section>
+
       <section className="border-b border-border bg-surface">
         <div className="container-bl grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
           <div>
@@ -50,9 +63,8 @@ function BallonUltralaufPage() {
             </p>
             <span className="rule-bl mt-6" aria-hidden="true" />
             <p className="prose-bl mt-6">
-              Mit dem ersten Ballon-Ultralauf in Welver begann 2018 meine Geschichte als
-              Veranstalter. Nach mehreren Jahren Pause soll das Format 2027 neu
-              aufgelegt werden.
+              Mit dem ersten Ballon-Ultralauf begann 2018 meine Geschichte als Veranstalter.
+              2027 bekommt das Format in Welver eine neue Heimat.
             </p>
             <p className="prose-bl mt-4">
               Die Grundidee bleibt bewusst einfach: ein familiärer Ultralauf,
