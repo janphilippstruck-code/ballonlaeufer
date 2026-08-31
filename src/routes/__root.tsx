@@ -99,7 +99,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Ballonläufer" },
       { property: "og:locale", content: "de_DE" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Ballonläufer – Vom Läufer. Für Läufer." },
+      {
+        property: "og:description",
+        content:
+          "Zeitmessung, Moderation und Unterstützung für Laufveranstaltungen – aus der Perspektive eines Läufers und Veranstalters.",
+      },
+      { property: "og:url", content: `${siteOrigin}/` },
+      { property: "og:image", content: ogImage },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImage },
     ],
     links: [
       {
@@ -107,6 +116,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify([
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Ballonläufer",
+            url: `${siteOrigin}/`,
+            inLanguage: "de-DE",
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Ballonläufer",
+            url: `${siteOrigin}/`,
+            email: "janphilippstruck@gmx.de",
+            logo: `${siteOrigin}/favicon.png`,
+          },
+        ]),
+      },
     ],
   }),
   shellComponent: RootShell,
