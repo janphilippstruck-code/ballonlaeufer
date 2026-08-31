@@ -42,7 +42,7 @@ export const projects: Project[] = [
     imageIsLogo: true,
     facts: ["Laufen", "Taktik", "Verfolgung", "Film"],
     href: "https://ultraverfolgt.xn--ballonlufer-r8a.de/",
-    linkLabel: "Ultra verfolgt entdecken ↗",
+    linkLabel: "Projektseite öffnen ↗",
     external: true,
     featured: true,
   },
